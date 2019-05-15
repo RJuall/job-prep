@@ -6,7 +6,27 @@ https://www.udemy.com/js-algorithms-and-data-structures-masterclass/
 
 ### Section 1 - Introduction
 
+Lots of content
+
+How to run the code...?
+
 ### Section 2 - Big O Notation
+
+Big O very important to the subject of algorithms and data structures
+
+Why does Big O notation exist?
+
+Big O is used to try and figure out which algorithmic solution is the "best"
+
+Reverse a string in JS: `string.split('').reverse().join('')`
+
+Big O is useful in that it gives a precise vocabulary to talk about how code performs
+
+Big O useful in discussing trade-offs between different approaches in code
+
+Big O is useful in identifying inefficient code, pain points in codebases
+
+
 
 ### Section 3 - Analyzing Performance of Arrays and Objects
 
