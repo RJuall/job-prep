@@ -47,6 +47,10 @@ What does better mean? Faster? Less memory intensive? More readable? Brevity?
 
 Time is not a reliable indicator of speed or efficiency for code
 
+Instead of counting units of time, Big O measures efficiency of code by measuring the number of simple operations the computer has to perform
+
+Big O aims to give a general idea of the number of operations in any given algorithm
+
 
 
 ### Section 3 - Analyzing Performance of Arrays and Objects
