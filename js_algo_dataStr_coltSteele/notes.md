@@ -26,6 +26,27 @@ Big O useful in discussing trade-offs between different approaches in code
 
 Big O is useful in identifying inefficient code, pain points in codebases
 
+```javascript
+// First sum to an int algorithm
+//    This solution is Big O(n)
+const addUpTo = num => {
+    let total = 0;
+    for (let i = 1; i <= num; i++) {
+        total += i;
+    }
+    return total;
+}
+// Second sum to an int algorithm
+//    This solution is Big O(1)
+const addUpto = num => {
+    return num * (num + 1) / 2;
+}
+```
+
+What does better mean? Faster? Less memory intensive? More readable? Brevity?
+
+Time is not a reliable indicator of speed or efficiency for code
+
 
 
 ### Section 3 - Analyzing Performance of Arrays and Objects
