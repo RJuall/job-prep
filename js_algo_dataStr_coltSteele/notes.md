@@ -143,6 +143,30 @@ Big O of array operations:
 
 ### Section 4 - Problem Solving Approach
 
+What _is_ an algorithm?
+
+What plan can be undertaken to solve an algorithm?
+
+Compare and contrast problem solving patterns:
+
+- Frequency counters
+- Two pointer problems
+- Divide and conquer
+
+An algorithm is a process or a set of steps to accomplish a certain task
+
+Just about everything in programming involves algorithms, it is the foundation for being a successful problem solver and developer
+
+Steps for improving at algorithmic thinking and problem solving: Devise a plan for solving problems, master common problem solving patterns
+
+Steps for problem solving:
+
+- Understand the problem
+- Explore concrete examples
+- Break it down
+- Solve/Simplify
+- Look back and refactor
+
 
 
 ### Section 5 - Problem Solving Patterns
