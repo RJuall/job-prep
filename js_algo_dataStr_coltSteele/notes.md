@@ -90,6 +90,12 @@ Recursion sometimes involves logarithmic space complexity
 
 ### Section 3 - Analyzing Performance of Arrays and Objects
 
+How do objects and arrays work through the lens of Big O?
+
+Why is adding elements to the beginning of arrays costly?
+
+What are the runtimes for arrays and objects and their built-in methods
+
 
 
 ### Section 4 - Problem Solving Approach
