@@ -161,11 +161,11 @@ Steps for improving at algorithmic thinking and problem solving: Devise a plan f
 
 Steps for problem solving:
 
-- Understand the problem
-- Explore concrete examples
-- Break it down
-- Solve/Simplify
-- Look back and refactor
+1. Understand the problem
+2. Explore concrete examples
+3. Break it down
+4. Solve/Simplify
+5. Look back and refactor
 
 Problem solving strategies adapted from George Polya's "How To Solve It"
 
@@ -258,6 +258,8 @@ function isAlphaNumeric(char) {
 ```
 
 ### Section 5 - Problem Solving Patterns
+
+
 
 ### Section 6 - Optional Challenges
 
