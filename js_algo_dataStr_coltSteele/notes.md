@@ -192,6 +192,21 @@ One example:
         - Int? Float? String? Etc?
     - Etc.
 
+Step two: Concrete examples
+
+Examples can help understand the problem better
+
+Examples also provide sanity checks that show the solution works the way it should
+
+**User stories** or **Unit tests**
+
+Explore examples:
+
+- Start with simple examples
+- Progress to more complex examples
+- Explore examples with empty inputs
+- Explore examples with invalid inputs
+
 
 
 ### Section 5 - Problem Solving Patterns
