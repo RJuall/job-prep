@@ -215,6 +215,14 @@ Forces one to think about the code to be written before writing before worrying 
 
 Writing out the steps beforehand in an interview setting can be important as the interviewer can see what the process would be even if time didn't allow for a full solve
 
+Step four: Solve or simplify
+
+If you can't solve the problem, solve a _simpler_ problem. Which means solve the parts that you can solve before trying to make progress on the parts that are giving you trouble
+
+Simplifying will likely also give you better understanding towards the parts that are more challenging
+
+In an interview session, make sure to get as much of the solution done as well as show how the problem could be solved as possible. Don't start with the part you don't know how to do and just spin your wheels
+
 
 
 ### Section 5 - Problem Solving Patterns
