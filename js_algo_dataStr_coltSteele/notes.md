@@ -129,9 +129,21 @@ Removal from the end of an array is O(1)
 
 Removal from within an array is O(n)
 
+Big O of array operations:
 
+- push - O(1)
+- pop - O(1)
+- shift - O(n)
+- unshift - O(n)
+- concat - O(n)
+- slice - O(n)
+- splice - O(n)
+- sort - O(n log n)
+- forEach/map/filter/reduce/etc. - O(n)
 
 ### Section 4 - Problem Solving Approach
+
+
 
 ### Section 5 - Problem Solving Patterns
 
