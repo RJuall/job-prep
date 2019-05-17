@@ -207,6 +207,14 @@ Explore examples:
 - Explore examples with empty inputs
 - Explore examples with invalid inputs
 
+Step three: Break it down
+
+Explicitly write out the steps needed
+
+Forces one to think about the code to be written before writing before worrying about syntax, etc.
+
+Writing out the steps beforehand in an interview setting can be important as the interviewer can see what the process would be even if time didn't allow for a full solve
+
 
 
 ### Section 5 - Problem Solving Patterns
