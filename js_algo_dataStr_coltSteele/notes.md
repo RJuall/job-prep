@@ -167,6 +167,31 @@ Steps for problem solving:
 - Solve/Simplify
 - Look back and refactor
 
+Problem solving strategies adapted from George Polya's "How To Solve It"
+
+Step one: Understand the problem
+
+Important to make sure that the problem is thoroughly understood before beginning work on the problem
+
+1. Ask clarification questions
+2. Can you restate the problem in your own words?
+3. What are the inputs that go into the problem?
+4. What are the outputs that should come from the solution?
+5. Can the outputs be determined from the inputs?
+6. How should I label the important pieces of data that are a part of the problem?
+
+One example:
+
+- Write a function which takes two numbers and returns their sum
+    - Restate: Implement addition
+    - What are the inputs?
+        - Only two numbers?
+        - Ints or Floats or other?
+        - How large will the inputs be?
+    - What are the outputs?
+        - Int? Float? String? Etc?
+    - Etc.
+
 
 
 ### Section 5 - Problem Solving Patterns
