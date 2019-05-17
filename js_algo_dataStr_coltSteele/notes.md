@@ -223,7 +223,39 @@ Simplifying will likely also give you better understanding towards the parts tha
 
 In an interview session, make sure to get as much of the solution done as well as show how the problem could be solved as possible. Don't start with the part you don't know how to do and just spin your wheels
 
+Refactoring questions:
 
+- Can you check the result?
+- Can you derive the result differently?
+- Can you understand it at a glance?
+- Can you use the result or method for some other problem?
+- Can you improve the performance of your solution?
+- Can you think of other ways to refactor?
+- How have other people solved this problem?
+
+```javascript
+// Increment an object with individual alphanumeric characters in a string
+function charCount(str) {
+    let obj = {};
+    for (let char of str) {
+        if (isAlphaNumeric(char)) {
+            char = char.toLowerCase();
+            obj[char] = ++obj[char] || 1;
+        }
+    }
+    return obj;
+}
+
+function isAlphaNumeric(char) {
+    let code = char.charCodeAt(0);
+    if (!(code > 47 && code < 58) &&  // numeric (0-9)
+        !(code > 64 && code < 91) &&  // upper alpha (A-Z)
+        !(code > 96 && code < 123)) { // lower alpha (a-z)
+            return false;
+        }
+        return true;
+}
+```
 
 ### Section 5 - Problem Solving Patterns
 
