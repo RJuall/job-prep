@@ -112,6 +112,23 @@ Big O of object methods:
 - Object.entries - O(n)
 - hasOwnProperty - O(1)
 
+Arrays are _ordered_ data structures
+
+Big O of arrays:
+
+- Insertion - _It depends..._
+- Removal - _It depends..._
+- Searching - O(n)
+- Access - O(1)
+
+Inserting to the end of an array is O(1)
+
+Inserting within an array is O(n)
+
+Removal from the end of an array is O(1)
+
+Removal from within an array is O(n)
+
 
 
 ### Section 4 - Problem Solving Approach
