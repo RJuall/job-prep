@@ -76,9 +76,21 @@ Strings require O(n) space, n indicating the string length
 
 Reference types are generally O(n), such as the array length or the number of keys in an object
 
+Logarithms are common in Big O notation, as in O(n log n)
 
+The log base number is not important to Big O notation
+
+Logarithmic time complexity is great, as in O(log n)
+
+Most common Big O expressions: O(1), O(log n), O(n), O(n log n), O(n^2)
+
+Searching and sorting algorithms can involve logarithmic time complexity
+
+Recursion sometimes involves logarithmic space complexity
 
 ### Section 3 - Analyzing Performance of Arrays and Objects
+
+
 
 ### Section 4 - Problem Solving Approach
 
