@@ -51,6 +51,23 @@ Instead of counting units of time, Big O measures efficiency of code by measurin
 
 Big O aims to give a general idea of the number of operations in any given algorithm
 
+Big O allows us to talk formally about how the runtime of an algorithm grows as the inputs grow
+
+Big O cares about the trends, not the details
+
+Big O is about the worst case scenario
+
+Rules of Big O: Constants don't matter - `O(2n) === O(n)`
+
+Rules of Big O: Smaller terms don't matter - `O(n^2 + 5n + 8) === O(n^2)`
+
+Big O shorthands:
+
+- Arithmetic operations are constant
+- Variable assignment is constant
+- Accessing elements in an array or object is constant
+- In a loop, the complexity is the length of the loop times the complexity of whatever happens in the loop
+
 
 
 ### Section 3 - Analyzing Performance of Arrays and Objects
