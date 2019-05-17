@@ -96,6 +96,22 @@ Why is adding elements to the beginning of arrays costly?
 
 What are the runtimes for arrays and objects and their built-in methods
 
+Objects are good when order doesn't matter and insertion and removal are important.
+
+Big O of objects:
+
+- Insertion - O(1)
+- Removal - O(1)
+- Searching - O(n)
+- Access - O(1)
+
+Big O of object methods:
+
+- Object.keys - O(n)
+- Object.values - O(n)
+- Object.entries - O(n)
+- hasOwnProperty - O(1)
+
 
 
 ### Section 4 - Problem Solving Approach
