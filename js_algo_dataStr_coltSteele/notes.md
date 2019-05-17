@@ -68,6 +68,14 @@ Big O shorthands:
 - Accessing elements in an array or object is constant
 - In a loop, the complexity is the length of the loop times the complexity of whatever happens in the loop
 
+Auxiliary space complexity: The memory space required by an algorithm, not including the inputs
+
+Most primitives are constant space
+
+Strings require O(n) space, n indicating the string length
+
+Reference types are generally O(n), such as the array length or the number of keys in an object
+
 
 
 ### Section 3 - Analyzing Performance of Arrays and Objects
