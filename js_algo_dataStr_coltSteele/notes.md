@@ -359,6 +359,8 @@ function anagram(str1, str2) {
 }
 ```
 
+Instead of creating two objects and comparing them, the first object can be constructed and then the second array can decrement from that constructed object, leaving an empty object if the words are anagrams
+
 
 
 ### Section 6 - Optional Challenges
