@@ -274,6 +274,48 @@ Some problem solving patterns:
 - Greedy algorithms
 - Backtracking
 
+Frequency counter: This pattern uses objects or sets to collect values or frequencies of values
+
+A frequency counter can often avoid the need for nested loops or O(n^2) operations with arrays or strings
+
+Problem: Write a function called same which accepts two arrays. The function should return true if every value in the array has its corresponding value squared in the second array. The frequency of values must be the same.
+
+```javascript
+function same(baseVals, squareVals) {
+    // Arrays must be equal
+    if (baseVals.length !== squareVals.length) {
+        return false;
+    }
+
+    // Empty objects to hold values and frequencies
+    baseValsFrequency = {};
+    squareValsFrequency = {};
+
+    // Frequency of each value in the non-squared array
+    for (let val of baseVals) {
+        baseValsFrequency[val] = ++baseValsFrequency[val] || 1;
+    }
+
+    // Frequency of each value in the squared array
+    for (let val of squareVals) {
+        squareValsFrequency[val] = ++squareValsFrequency[val] || 1;
+    }
+
+    // console.log(baseValsFrequency);
+    // console.log(squareValsFrequency);
+
+    // Compares the frequency of the non-squared object to the squared object
+    for (let [key, val] of Object.entries(baseValsFrequency)) {
+        if (squareValsFrequency[(key**2)] !== val) {
+            return false;
+        }
+    }
+
+    // Return true if passes all tests
+    return true;
+}
+```
+
 
 
 ### Section 6 - Optional Challenges
