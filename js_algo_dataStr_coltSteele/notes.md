@@ -259,6 +259,21 @@ function isAlphaNumeric(char) {
 
 ### Section 5 - Problem Solving Patterns
 
+How to improve in problem solving?
+
+- Devise a plan for solving problems
+- Master common problem solving patterns
+
+Some problem solving patterns:
+
+- Frequency counter
+- Multiple pointers
+- Sliding window
+- Divide and conquer
+- Dynamic programming
+- Greedy algorithms
+- Backtracking
+
 
 
 ### Section 6 - Optional Challenges
