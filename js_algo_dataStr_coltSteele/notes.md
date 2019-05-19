@@ -601,7 +601,41 @@ function areThereDuplicates(...Args) {
 }
 ```
 
+Write a function called `averagePair`. Given a sorted array of integers and a target average, determine if there is a pair of values in the array where the average pair equals the target average. There may be more than one pair that matches the average target. Time: O(n), Space O(1).
 
+```javascript
+function averagePair(arr, avg) {
+    // Array can't be empty, average can't be zero
+    if (arr.length === 0 || avg === 0) {
+        return false;
+    }
+
+    // One pointer for the left side of the array
+    //   and one pointer for the right side of the array
+    let left = 0;
+    let right = arr.length - 1;
+
+    // While the pointers are not crossing,
+    //   check to see if the average has been found
+    //   otherwise continue looping from the right if
+    //   the average is still possible or increment
+    //   from the left if not.
+    while (left < right) {
+        if ((arr[left] + arr[right]) / 2 === avg) {
+            return true;
+        }
+        else if ((arr[left] + arr[right]) / 2 > avg) {
+            right--;
+        }
+        else {
+            left++;
+            right = arr.length - 1;
+        }
+    }
+
+    return false;
+}
+```
 
 ### Section 7 - Recursion
 
