@@ -490,7 +490,32 @@ Divide and conquer pattern:
 - This pattern involves dividing a data set into smaller chunks and then repeating a process with a subset of data
 - This pattern can tremendously decrease time complexity
 
+Binary search is an example of a divide and conquer algorithm
 
+```javascript
+// Binary search
+function biSearch(arr, val) {
+    let min = 0;
+    let max = arr.length -1;
+
+    while (min <= max) {
+        let middle = Math.floor((min + max) / 2);
+        let currentElement = arr[middle];
+
+        if (arr[middle] < val) {
+            min = middle + 1;
+        }
+        else if (arr[middle] > val) {
+            max = middle - 1;
+        }
+        else {
+            return middle;
+        }
+    }
+    
+    return -1;
+}
+```
 
 ### Section 6 - Optional Challenges
 
