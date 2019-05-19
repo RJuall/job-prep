@@ -361,7 +361,36 @@ function anagram(str1, str2) {
 
 Instead of creating two objects and comparing them, the first object can be constructed and then the second array can decrement from that constructed object, leaving an empty object if the words are anagrams
 
+Multiple pointer pattern:
 
+- Creating pointers or values that correspond to an index or position and move towards the beginning, end or middle based on a certain condition
+- Very efficient for solving problems with minimal space complexity as well
+
+Write a function called sumZero which accepts a sorted array of integers. The function should find the first pair where the sum is 0. Return an array that includes both values that sum to zero or undefined if a pair does not exist.
+
+```javascript
+// Solution as provided in video S5L30
+function sumZero(arr) {
+    let left = 0;
+    let right = arr.length - 1;
+    while (left < right) {
+        let sum = arr[left] + arr[right];
+        if (sum === 0) {
+            return [arr[left], arr[right]];
+        } else if (sum > 0) {
+            right--;
+        } else {
+            left++;
+        }
+    }
+}
+```
+
+Implement a function called `countUniqueValues`, which accepts a sorted array and counts the unique values in the array. There can be negative numbers in the array, but it will always be sorted.
+
+```javascript
+
+```
 
 ### Section 6 - Optional Challenges
 
