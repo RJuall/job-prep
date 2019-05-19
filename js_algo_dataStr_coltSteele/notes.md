@@ -413,6 +413,85 @@ function countUniqueValues(arr) {
 }
 ```
 
+Sliding window pattern:
+
+- This pattern involves creating a window which can either be an array or number from one position to another
+- Depending on a certain condtion, the window either increases or closes (and a new window is created)
+- Very useful for keeping track of a subset of data in an array/string/etc.
+
+Write a function called `maxSubarraySum` which accepts an array of integers and a number called `n`. The function should calculate the maximum sum of `n` consecutive elements in the array.
+
+```javascript
+function maxSubarraySum(arr, n) {
+    
+    // Catch edge cases
+    if (arr.length === 0 || n < 1)
+        return null;
+    if (arr.length < n)
+        return null;
+
+    // If `n` is 1, return the largest num in the array
+    if (n === 1) {
+        let max = arr[0];
+        arr.forEach(elem => {
+            if (elem > max) {
+                max = elem;
+            }
+        });
+        return max;
+    }
+
+    // Create a window of a size defined by `n`
+    let left = 0;
+    let right = n - 1;
+    let maxSub = Number.NEGATIVE_INFINITY;
+
+    // Iterate through the array in `n` defined
+    //   subarrays looking for the largest contiguous
+    //   sum
+    while (right < arr.length) {
+        let sum = 0;
+        for (let i = left; i <= right; i++) {
+            sum += arr[i];
+        }
+        if (sum > maxSub) {
+            maxSub = sum;
+        }
+        left++;
+        right++;
+
+    }
+    return maxSub;
+}
+```
+
+The above is not the optimal solution and does not reflect the 'sliding window' pattern
+
+```javascript
+// This reflects the 'sliding window' pattern
+function maxSubarraySum(arr, n) {
+    let maxSum = 0;
+    let tempSum = 0;
+    if (arr.length < num) return null;
+    for (let i = 0; i < n; i++) {
+        maxSum += arr[i];
+    }
+    tempSum = maxSum;
+    for (let i = n; i < arr.length; i++) {
+        tempSum = tempSum = arr[i-n] + arr[i];
+        maxSum = Math.max(maxSum, tempSum);
+    }
+    return maxSum;
+}
+```
+
+Divide and conquer pattern:
+
+- This pattern involves dividing a data set into smaller chunks and then repeating a process with a subset of data
+- This pattern can tremendously decrease time complexity
+
+
+
 ### Section 6 - Optional Challenges
 
 ### Section 7 - Recursion
