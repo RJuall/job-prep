@@ -512,12 +512,56 @@ function biSearch(arr, val) {
             return middle;
         }
     }
-    
+
     return -1;
 }
 ```
 
 ### Section 6 - Optional Challenges
+
+Write a function called `sameFrequency`. Given two positive integers, find out if the two numbers have the same frequency of digits. Must be an O(n) algorithm.
+
+```javascript
+function sameFrequency(num1, num2) {
+    // If they are the same numbers return true
+    if (num1 === num2) return true;
+
+    // Create char arrays from the integers
+    const num1Arr = num1.toString().split('');
+    const num2Arr = num2.toString().split('');
+
+    // If they are not the same length return false
+    if (num1Arr.length !== num2Arr.length) return false;
+
+    // Create an empty object to hold characters and vals
+    const num1FreqObj = {};
+    // Returning false was not working...?
+    let returnState = true;
+
+    // Populate an object with character keys and frequency vals
+    num1Arr.forEach(elem => {
+        num1FreqObj[elem] = ++num1FreqObj[elem] || 1;
+    });
+
+    // Decrement the frequency object, checking if the two
+    //   arrays are not the same
+    num2Arr.forEach(elem => {
+        // If there is a different key return false
+        if (!num1FreqObj.hasOwnProperty(elem)) {
+            // returning false directly here was not working
+            returnState = false;
+        }
+        // Decrement the frequency object
+        num1FreqObj[elem] = --num1FreqObj[elem];
+        // If the count goes lower than 0 the nums are not identical
+        if (num1FreqObj[elem] < 0)
+            returnState = false;
+    });
+
+    return returnState;
+
+}
+```
 
 ### Section 7 - Recursion
 
