@@ -563,6 +563,46 @@ function sameFrequency(num1, num2) {
 }
 ```
 
+Implement a function called `areThereDuplicates` which accepts a variable number of arguments and checks whether there are any duplicates among the arguments passed in. This can be solved using the frequency counter pattern or the multiple pointers pattern.
+
+```javascript
+function areThereDuplicates(...Args) {
+
+    /*
+    // Create an arg array and an arg set
+    //   and compare their lengths     
+    const arrArgs = [...Args];
+    const setArgs = new Set(arrArgs);
+    if (arrArgs.length === setArgs.size) {
+        return false;
+    }
+    else {
+        return true;
+    } 
+    */
+
+    // // One line set-based solution
+    // return new Set(arguments).size !== arguments.length
+
+    // Create an arg array and an empty frequency object
+    const arrArgs = [...Args];
+    const argFreqObj = {};
+
+    // While creating the frequency obj return false if any
+    //   key increments beyond one
+    for (elem of arrArgs) {
+        argFreqObj[elem] = ++argFreqObj[elem] || 1;
+        if (argFreqObj[elem] > 1) {
+            return true;
+        }
+    };
+
+    return false;
+}
+```
+
+
+
 ### Section 7 - Recursion
 
 ### Section 8 - Recursion Problem Set
