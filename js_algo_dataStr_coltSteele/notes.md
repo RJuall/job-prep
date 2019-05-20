@@ -699,6 +699,30 @@ function isSubsequence(subStr, str) {
 }
 ```
 
+```javascript
+// "Official" solutions for the isSubsequence problem
+function isSubsequence(str1, str2) {
+    // Iterative solution
+    var i = 0;
+    var j = 0;
+    if (!str1) return true;
+    while (j < str2.length) {
+        if(str2[j] === str1[i]) i++;
+        if (i === str1.length) return true;
+        j++;
+    }
+    return false;
+}
+
+function isSubsequence(str1, str2) {
+    // Recursive solution
+    if (str1.length === 0) return true;
+    if (str2.length === 0) return false;
+    if (str2[0] === str1[0]) return isSubsequence(str1.slice(1), str2.slice(1));
+    return isSubsequence(str1, str2.slice(1));
+}
+```
+
 ### Section 7 - Recursion
 
 ### Section 8 - Recursion Problem Set
