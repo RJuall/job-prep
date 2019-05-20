@@ -640,7 +640,47 @@ function averagePair(arr, avg) {
 Write a function called `isSubsequence` which takes in two strings and checks whether the characters in the first string form a subsequence of characters in the second string. In other words, the function should check whether the characters in the first string appear somewhere in the second string without their order changing. Time complexity: O(n + m), Space complexity: O(1).
 
 ```javascript
+function isSubsequence(subStr, str) {
 
+    if (subStr.length > str.length) return false;
+    if (subStr === str) return true;
+
+    let left = -1;
+
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === subStr[0]) {
+            left = i;
+            break;
+        }
+    }
+
+    if (left === -1) return false;
+
+    let right = -1;
+    
+    for (let i = str.length - 1; i >= (left + subStr.length - 1); i--) {
+        if (str[i] === subStr[subStr.length - 1]) {
+            right = i;
+            break;
+        }
+    }
+
+    if (right === -1) return false;
+
+    let testStr = subStr.split('');
+
+    for (let i = right; i >= left; i--) {
+        if (str[i] === testStr[testStr.length - 1]) {
+            testStr.pop();
+            console.log(testStr);
+        }        
+        if (testStr.length === 0) {
+            return true;
+        } 
+    }
+
+    return false;
+}
 ```
 
 ### Section 7 - Recursion
