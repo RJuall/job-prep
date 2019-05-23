@@ -821,10 +821,118 @@ function minSubArrayLen(arr, sum) {
 ```
 
 ```javascript
+function findLongestSubstring(str) {
+    /*
+        Write a function called findLongestSubstring, which accepts a string
+        and returns the length of the longest substring with all distinct
+        characters.
+    */
 
+    // Return 0 for an empty string
+    if (str.length === 0) return 0;
+
+    // Start a pointer left and right
+    //   and initialize a substring
+    //   with the contents of the pointers
+    //   and the current longest substring
+    //   with distinct characters at 1
+    let left = 0;
+    let right = 1;
+    let substring = str[left];
+    let longestSubstring = 1;
+
+    while (left < str.length) {
+        // If we have reached the end of the
+        //   string, break
+        if (right === str.length) {
+            break;
+        }
+        // If the character is not in the current 
+        //   substring, add it, increment right
+        //   and check to see if it's the longest
+        //   substring
+        else if (!substring.includes(str[right])) {
+            substring = substring.concat(str[right]);
+            right++;
+            if ((right - left) > longestSubstring) longestSubstring = right - left;
+        }
+        else {
+            // If the character is in the substring
+            //    jump left to the right of the first
+            //    occurrence of the char and add it to
+            //    the end of the new substring
+            let index = substring.indexOf(str[right]);
+            index++;
+            substring = substring.slice(index);
+            substring = substring.concat(str[right]);
+            right++;
+            left += index;
+        }
+    }
+
+    return longestSubstring;
+}
+```
+
+```javascript
+// Official maxSubArray Solution
+function maxSubArraySum(arr, num) {
+    if (arr.length < num) return null;
+    let total = 0;
+    for (let i = 0; i < num; i++) {
+        total += arr[i];
+    }
+    let currentTotal = total;
+    for (let i = num; i < arr.length; i++) {
+        currentTotal += arr[i] - arr[i-num];
+        total = Max.max(total, currentTotal);
+    }
+    return total;
+}
+
+// Official minSubArrayLen Solution
+function minSubArrayLen(nums, sum) {
+    let total = 0;
+    let start = 0;
+    let end = 0;
+    let minLen = Infinity;
+    while (start < nums.length) {
+        if (total < sum && end < nums.length) {
+            total += nums[end];
+            end++;
+        } else if (total >= sum) {
+            minLen = Math.min(minLen, end - start);
+            total -= nums[start];
+            start++;
+        } else {
+            break;
+        }
+    }
+    return minLen === Infinity ? 0 : minLen;
+}
+
+// Official findLongestSubstring Solution
+function findLongestSubstring(str) {
+    let longest = 0;
+    let seen = {};
+    let start = 0;
+
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i];
+        if(seen[char]) {
+            start = Math.max(start, seen[char]);
+        }
+        longest = Math.max(longest, i - start + 1);
+        seen[char] = i + 1;
+    }
+
+    return longest;
+}
 ```
 
 ### Section 7 - Recursion
+
+
 
 ### Section 8 - Recursion Problem Set
 
