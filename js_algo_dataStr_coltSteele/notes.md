@@ -723,6 +723,51 @@ function isSubsequence(str1, str2) {
 }
 ```
 
+```javascript
+function maxSubarraySum(arr, sumNum) {
+    // Given an array of integers and a number, write a function
+    //   called maxSubarraySum, which finds the maximum sum of a
+    //   subarray with the length of the number passed to
+    //   the function. The subarray must consist of consecutive
+    //   elements from the original array. Time complexity: O(n)
+    //   Space complexity: O(1)
+
+
+    // Return `null` if subArray length
+    //   greater than array length
+    if (sumNum > arr.length) return null;
+
+    // Initialize maximum subarray sum
+    //   counter to the first possible
+    //   contiguous subarray
+    let maxSum = 0;
+    for (let i = 0; i < sumNum; i++) {
+        maxSum += arr[i];
+    }
+
+    // Set the temporary sum variable to the
+    //   initial maximum subarray sum value
+    let tempNum = maxSum;
+
+    // Iterate through the array adding the next
+    //   value in the array and subtracting the last
+    //   so to maintain a constant subarray size.
+    //   Change the maximum sum of a subarray value
+    //   if a larger value is found
+    for (let i = sumNum; i < arr.length; i++) {
+        tempNum += arr[i];
+        tempNum -= arr[(i-sumNum)];
+        if (tempNum > maxSum) maxSum = tempNum;
+    }
+
+    return maxSum;
+}
+```
+
+```javascript
+
+```
+
 ### Section 7 - Recursion
 
 ### Section 8 - Recursion Problem Set
